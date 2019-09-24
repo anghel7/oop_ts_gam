@@ -9,3 +9,4 @@ console.log(list);
 
 
 
+let nombre = "Juan Perez";
