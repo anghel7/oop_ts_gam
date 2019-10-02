@@ -53,3 +53,4 @@ let figuraGeometrica3: Rectangulo = new Rectangulo(17, 80);
 
 var resultado:boolean = figuraGeometrica1 instanceof FiguraGeometrica;
 
+console.log(resultado);
