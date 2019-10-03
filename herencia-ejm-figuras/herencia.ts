@@ -88,6 +88,3 @@ var resultado: boolean = figuraGeometrica1 instanceof FiguraGeometrica;
 console.log(figuraGeometrica2.getPrincipalInfo());
 console.log(figuraGeometrica4.getPrincipalInfo());
 console.log(figuraGeometrica5.getPrincipalInfo());
-
-
-
