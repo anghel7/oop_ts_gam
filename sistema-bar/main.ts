@@ -1,15 +1,25 @@
 export class Bar {
-    nombre: string;//Atributo
-    capacidad: number;//Atributo
+    private nombre: string;//Atributo
+    private capacidad: number;//Atributo
     constructor(nom: string, cap: number) {
         this.nombre = nom;
         this.capacidad = cap;
     }
+    /**Cambiar el valor de un atributo
+    creo el metodo set que recibe como parametro
+    el nuevo valor que deseo actualizar*/
+    public setNombre(nom: string): void {
+        this.nombre = nom;
+    }
+
+    public getNombre(): string {
+        return this.nombre;
+    }
 }
 
 export class BarMan {
-    nombre: string;
-    apellido: string;
+    private nombre: string;
+    private apellido: string;
     constructor(nom: string, ape: string) {
         this.nombre = nom;
         this.apellido = ape;
@@ -17,9 +27,9 @@ export class BarMan {
 }
 
 export class Trago {
-    nombre: string;
-    color: string;
-    cantidad: number;
+    private nombre: string;
+    private color: string;
+    private cantidad: number;
     constructor(nom: string, col: string, cant: number) {
         this.nombre = nom;
         this.color = col;
@@ -44,7 +54,9 @@ let bar1: Bar = new Bar("Nueva Era", 50);
 
 let bar2: Bar = new Bar("El Patio", 200);
 
+bar1.setNombre("El pueblito");
+//bar1.nombre = "pueblito"; forma inconrrecta actualizar un atributo
+
 console.log(bar1);
-console.log(bar2);
-
-
+//console.log(bar1.nombre);//forma incorrecta de perdir valor
+console.log(bar1.getNombre());
